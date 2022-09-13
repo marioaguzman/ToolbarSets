@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ToolbarSets" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -682,8 +684,8 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="ToolbarSets" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="MainWindow" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -693,25 +695,122 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="8Rh-jP-QVX" kind="relationship" relationship="window.shadowedContentViewController" id="bg2-eg-Idx"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Tab View Controller-->
+        <scene sceneID="JlX-tU-Qxj">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <tabViewController selectedTabViewItemIndex="0" tabStyle="unspecified" id="8Rh-jP-QVX" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="6kd-co-oxS"/>
+                        <tabViewItem identifier="" id="26n-eR-aEP"/>
+                        <tabViewItem id="Wfv-Y2-EOo"/>
+                    </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
+                    <tabView key="tabView" type="noTabsNoBorder" id="NHl-Yd-RiE">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="8Rh-jP-QVX" id="1ek-zC-e9D"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="NHl-Yd-RiE" id="Yfs-WQ-Iw2"/>
+                        <segue destination="f0i-Me-gnP" kind="relationship" relationship="tabItems" id="A9i-fh-4FV"/>
+                        <segue destination="TBw-el-ckk" kind="relationship" relationship="tabItems" id="tJ3-xT-IY6"/>
+                        <segue destination="CPx-AL-POo" kind="relationship" relationship="tabItems" id="CwE-Gh-Ebq"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="GRo-7g-hfS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="907"/>
+        </scene>
+        <!--Listen Now-->
+        <scene sceneID="rRM-Fb-WjV">
+            <objects>
+                <viewController title="Listen Now" id="f0i-Me-gnP" sceneMemberID="viewController">
+                    <view key="view" id="sJm-0f-W3E">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wvi-4Y-JZK">
+                                <rect key="frame" x="189" y="142" width="72" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Listen Now" id="QsM-TQ-K8Q">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wvi-4Y-JZK" firstAttribute="centerX" secondItem="sJm-0f-W3E" secondAttribute="centerX" id="KUX-Rg-xOJ"/>
+                            <constraint firstItem="wvi-4Y-JZK" firstAttribute="centerY" secondItem="sJm-0f-W3E" secondAttribute="centerY" id="zIc-KO-JCc"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="yuS-Yc-qVY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="829" y="384"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="80f-ZN-lCM">
+            <objects>
+                <viewController title="Browse" id="TBw-el-ckk" sceneMemberID="viewController">
+                    <view key="view" id="dlH-Lf-vUe">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hQd-Hy-Nlf">
+                                <rect key="frame" x="201" y="142" width="49" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Browse" id="Zif-4X-law">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hQd-Hy-Nlf" firstAttribute="centerX" secondItem="dlH-Lf-vUe" secondAttribute="centerX" id="CWL-am-kcu"/>
+                            <constraint firstItem="hQd-Hy-Nlf" firstAttribute="centerY" secondItem="dlH-Lf-vUe" secondAttribute="centerY" id="Wuy-YM-xUF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="HaG-XA-qg0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="760"/>
+        </scene>
+        <!--Radio-->
+        <scene sceneID="slt-95-kjA">
+            <objects>
+                <viewController title="Radio" id="CPx-AL-POo" sceneMemberID="viewController">
+                    <view key="view" id="hYp-k7-vwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cDg-dK-EJ0">
+                                <rect key="frame" x="206" y="142" width="39" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Radio" id="nK3-w7-Yvz">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cDg-dK-EJ0" firstAttribute="centerY" secondItem="hYp-k7-vwZ" secondAttribute="centerY" id="HQr-Vn-wIE"/>
+                            <constraint firstItem="cDg-dK-EJ0" firstAttribute="centerX" secondItem="hYp-k7-vwZ" secondAttribute="centerX" id="ede-R9-6Yr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="csz-Lw-ZZz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="1153"/>
         </scene>
     </scenes>
 </document>

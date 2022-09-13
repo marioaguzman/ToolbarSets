@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		AC7A6426288665800092C450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A6425288665800092C450 /* AppDelegate.swift */; };
-		AC7A6428288665800092C450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A6427288665800092C450 /* ViewController.swift */; };
 		AC7A642A288665820092C450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC7A6429288665820092C450 /* Assets.xcassets */; };
 		AC7A642D288665820092C450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7A642B288665820092C450 /* Main.storyboard */; };
+		AC7A6435288666340092C450 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A6434288666340092C450 /* MainWindowController.swift */; };
+		AC7A6437288677C00092C450 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A6436288677C00092C450 /* Definitions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC7A6422288665800092C450 /* ToolbarSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolbarSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7A6425288665800092C450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC7A6427288665800092C450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC7A6429288665820092C450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC7A642C288665820092C450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC7A642E288665820092C450 /* ToolbarSets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToolbarSets.entitlements; sourceTree = "<group>"; };
+		AC7A6434288666340092C450 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		AC7A6436288677C00092C450 /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				AC7A6425288665800092C450 /* AppDelegate.swift */,
-				AC7A6427288665800092C450 /* ViewController.swift */,
+				AC7A6434288666340092C450 /* MainWindowController.swift */,
+				AC7A6436288677C00092C450 /* Definitions.swift */,
 				AC7A6429288665820092C450 /* Assets.xcassets */,
 				AC7A642B288665820092C450 /* Main.storyboard */,
 				AC7A642E288665820092C450 /* ToolbarSets.entitlements */,
@@ -131,8 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC7A6428288665800092C450 /* ViewController.swift in Sources */,
+				AC7A6437288677C00092C450 /* Definitions.swift in Sources */,
 				AC7A6426288665800092C450 /* AppDelegate.swift in Sources */,
+				AC7A6435288666340092C450 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +276,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4N3K4K49FN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Toolbar Sets";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -299,9 +304,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4N3K4K49FN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Toolbar Sets";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
